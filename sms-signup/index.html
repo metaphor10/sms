@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMS signup — Ariel Borochov</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <p><a class="brand" href="../">Ariel Borochov</a></p>
+    <h1>SMS signup</h1>
+    <p class="muted">Opt in to recurring account and order text messages from Ariel Borochov. Consent is not required to use other services. Message frequency varies. Message and data rates may apply.</p>
+    <div class="card">
+      <form id="signup" action="#" method="post">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="phone">Mobile number</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(555) 555-5555" required>
+
+        <label class="consent">
+          <input id="consent" name="consent" type="checkbox" required>
+          <span>I agree to receive recurring account and order text messages from Ariel Borochov. Message frequency varies. Message and data rates may apply. Reply STOP to cancel, HELP for help. Consent is not a condition of purchase. <a href="../terms/">Terms</a> and <a href="../privacy/">Privacy Policy</a>.</span>
+        </label>
+
+        <button type="submit">Subscribe to texts</button>
+      </form>
+      <p class="ok" id="ok">You are signed up for texts from Ariel Borochov. Message frequency varies. Message and data rates may apply. Reply STOP to cancel, HELP for help.</p>
+    </div>
+    <p>You can also opt in by texting START after you receive a confirmation from Ariel Borochov. Reply STOP to cancel at any time.</p>
+    <footer>
+      <a href="../">Home</a> · <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("signup").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("ok").style.display = "block";
+    });
+  </script>
+</body>
+</html>
